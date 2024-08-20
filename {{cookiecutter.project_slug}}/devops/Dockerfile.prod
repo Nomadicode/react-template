@@ -1,0 +1,41 @@
+# build stage
+FROM node:20-buster-slim as build-stage
+
+ARG NODE_ENV
+ARG API_ROOT
+ARG API_DOMAIN
+ARG GOOGLE_MAPS_API_KEY
+ARG GOOGLE_MAP_ID
+ARG GOOGLE_CONTAINER_ID
+ARG GOOGLE_MEASUREMENT_ID
+ARG GOOGLE_STREAM_ID
+
+ENV NODE_ENV ${NODE_ENV}
+ENV VUE_APP_API_ROOT ${API_ROOT}
+ENV VUE_APP_API_DOMAIN ${API_DOMAIN}
+ENV VUE_APP_GOOGLE_MAPS_API_KEY ${GOOGLE_MAPS_API_KEY}
+ENV VUE_APP_GOOGLE_MAP_ID ${GOOGLE_MAP_ID}
+ENV VUE_APP_GOOGLE_CONTAINER_ID ${GOOGLE_CONTAINER_ID}
+ENV VUE_APP_GOOGLE_MEASUREMENT_ID ${GOOGLE_MEASUREMENT_ID}
+ENV VUE_APP_GOOGLE_STREAM_ID ${GOOGLE_STREAM_ID}
+
+RUN mkdir /app
+WORKDIR /app
+
+COPY ./client/package*.json /app/
+
+RUN yarn install
+
+COPY ./client /app/
+
+RUN yarn run build
+
+# production stage
+FROM nginx:stable-alpine as production-stage
+ENV NODE_ENV=production
+COPY ./devops/configs/nginx.conf /etc/nginx/nginx.conf
+RUN rm -rf /usr/share/nginx/html/*
+
+COPY --from=build-stage /app/dist /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

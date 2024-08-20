@@ -1,0 +1,30 @@
+{
+    "project_name": "Nomadicode UI Project",
+    "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_')|replace('.', '_')|trim() }}_ui",
+    "version": "0.0.1",
+    "description": "Nomadicode UI Project",
+    "domain_name": "nomadicode.com",
+    "author": "Nomadicode Dev Team",
+    "email": "dev@nomadicode.com",
+    "timezone": "UTC",
+
+    "use_docker": true,
+    "use_kubernetes": false,
+    "i18n": true,
+    "use_types": true,
+    "require_tests": true,
+
+    "ui_framework": [
+        "react"
+    ],
+
+    "cloud_provider": [
+        "AWS",
+        "GCP",
+        "DO",
+        "Netlify",
+        "None"
+    ],
+
+    "_secret_DO_GH": "${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}"
+}

@@ -1,0 +1,63 @@
+// Social Media
+$brand-amazon: #FF9900;
+$brand-bitcoin: #F7931A;
+$brand-facebook: #4267B2;
+$brand-google: #DB4437;
+$brand-instagram: #C13584;
+$brand-linkedin: #2867B2;
+$brand-pinterest: #BD081C;
+$brand-reddit: #FF4500;
+$brand-snapchat: #FFFC00;
+$brand-tiktok: #25F4EE;
+$brand-twitter: #1DA1F2;
+$brand-youtube: #FF0000;
+
+$brand-colors: (
+    'amazon': $brand-amazon,
+    'bitcoin': $brand-bitcoin,
+    'facebook': $brand-facebook,
+    'google': $brand-google,
+    'instagram': $brand-instagram,
+    'linkedin': $brand-linkedin,
+    'pinterest': $brand-pinterest,
+    'reddit': $brand-reddit,
+    'snapchat': $brand-snapchat,
+    'tiktok': $brand-tiktok,
+    'twitter': $brand-twitter,
+    'youtube': $brand-youtube
+);
+
+
+
+@mixin box-shadow {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.51);
+}
+@mixin box-shadow-light {
+	box-shadow: 0 0 2px rgba(255,255,255,0.51);
+}
+@mixin box-shadow-muted {
+	box-shadow: 0 0 4px rgba(0,0,0,0.50);
+}
+
+// Utility Colors
+$warning-color: #E3AF00;
+$danger-color: #C52F00;
+$success-color: #1AA179;
+$info-color: #6EC6F7;
+
+$text-color: #333;
+$text-light: #FEFEFE;
+$border-light: #B1B1B1;
+
+$primary-color: #000A3E;
+$accent-color: #00C0FF;
+$bg-color: #F2F2F2;
+
+$component-colors: (
+	'warning': $warning-color,
+	'danger': $danger-color,
+	'success': $success-color,
+	'info': $info-color,
+	'primary': $primary-color,
+	'accent': $accent-color,
+);

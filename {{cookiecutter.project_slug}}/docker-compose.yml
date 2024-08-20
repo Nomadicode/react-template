@@ -1,0 +1,20 @@
+services:
+  client:
+    container_name: {{cookiecutter.project_slug}}
+    build:
+      context: .
+      dockerfile: ./devops/Dockerfile.dev
+    ports:
+      - "3000:3000"
+    env_file: .env.local
+    volumes:
+      - ./client:/app
+      - client_node_modules:/app/node_modules
+
+volumes:
+  client_node_modules:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./client/node_modules

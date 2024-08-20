@@ -1,0 +1,74 @@
+@import "scheme/reset";
+@import "scheme/fonts";
+@import "scheme/typography";
+@import "scheme/colors";
+@import "scheme/screens";
+@import "scheme/components";
+
+body {
+	box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+	font-size: $body-md;
+    * {
+		font-family: "Karla", sans-serif;
+		font-size: $body-md;
+        box-sizing: border-box;
+    }
+}
+
+.p-password {
+    .p-inputtext {
+        min-width: 100%;
+    }
+}
+
+.p-dialog {
+	width: calc(100vw - 20px);
+	max-width: 900px;
+}
+
+.content,.container {
+	min-height: calc(100vh - 309px);
+}
+
+.flex-basis-50 {
+	flex-basis: 50%;
+}
+
+.page-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.social-auth {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+
+	button {
+		border: none;
+		padding: 10px;
+		border-radius: 4px;
+		cursor: pointer;
+
+		&:disabled {
+			cursor: not-allowed;
+			opacity: 0.5;
+		}
+	}
+	.facebook {
+		background-color: #4267B2;
+		color: #FFF;
+	}
+	.google {
+		background-color: #DB4437;
+		color: #FFF;
+	}
+	.instagram {
+		background-color: #E1306C;
+		color: #FFF;
+	}
+}

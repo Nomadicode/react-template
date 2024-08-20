@@ -1,0 +1,145 @@
+@import "colors";
+
+:root {
+    --font-body-sm: 12px;
+    --font-body-md: 14px;
+    --font-body-lg: 16px;
+    --font-body-xl: 18px;
+
+    --font-header-xs: 16px;
+    --font-header-sm: 18px;
+    --font-header-md: 20px;
+    --font-header-lg: 22px;
+    --font-header-xl: 24px;
+}
+
+$font-base: 14;
+
+$body-xs: $font-base - 4px;
+$body-sm: $font-base - 2px;
+$body-md: $font-base + 0px;
+$body-lg: $font-base + 3px;
+$body-xl: $font-base + 5px;
+
+
+$header-base: 20px;
+$header-xs: $header-base - 4px;
+$header-sm: $header-base - 2px;
+$header-md: $header-base + 0px;
+$header-lg: $header-base + 2px;
+$header-xl: $header-base + 4px;
+$header-hero: $header-base + 10px;
+
+
+body {
+    font-size: $body-md;
+    color: $text-color;
+}
+
+.body-xs {
+    font-family: "Karla", sans-serif;
+    font-size: $body-xs;
+    line-height: 1.3rem;
+	font-weight: 200;
+}
+
+.body-sm {
+    font-family: "Karla", sans-serif;
+    font-size: $body-sm;
+    line-height: 1.3rem;
+	font-weight: 200;
+}
+
+.body-md {
+    font-family: "Karla", sans-serif;
+    font-size: $body-md;
+    line-height: 1.4rem;
+	font-weight: 200;
+}
+
+.body-lg {
+    font-family: "Karla", sans-serif;
+    font-size: $body-lg;
+    line-height: 1.6rem;
+	font-weight: 200;
+}
+
+.body-xl {
+    font-family: "Karla", sans-serif;
+    font-size: $body-xl;
+    line-height: 1.9rem;
+	font-weight: 200;
+}
+
+.body-link {
+    text-decoration: none;
+    color: $accent-color;
+	font-weight: 300;
+	border: none;
+	background: transparent;
+}
+
+.heading-xs {
+    font-family: "Bodoni Moda", sans-serif;
+    font-size: $header-xs;
+    font-weight: 600;
+    line-height: 1.5rem;
+}
+
+.heading-sm {
+    font-family: "Bodoni Moda", sans-serif;
+    font-size: $header-sm;
+    font-weight: 600;
+    line-height: 1.9rem;
+}
+
+.heading-md {
+    font-family: "Bodoni Moda", sans-serif;
+    font-size: $header-md;
+    font-weight: 600;
+    line-height: 2rem;
+}
+
+.heading-lg {
+    font-family: "Bodoni Moda", sans-serif;
+    font-size: $header-lg;
+    font-weight: 600;
+    line-height: 2.5rem;
+}
+
+.heading-xl {
+    font-family: "Bodoni Moda", sans-serif;
+    font-size: $header-xl;
+    font-weight: 600;
+    line-height: 3rem;
+}
+
+.heading-hero {
+    font-family: "Bodoni Moda", sans-serif;
+    font-size: $header-hero;
+    font-weight: 600;
+    line-height: 4rem;
+}
+
+.heavy {
+    font-weight: 700;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.centered {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.underlined {
+    border-bottom: 1px solid $text-color;
+}
+
+label {
+    font-weight: 400 !important;
+    font-family: "Karla", sans-serif; 
+    font-size: 16px !important;
+}
